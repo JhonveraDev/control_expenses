@@ -1,16 +1,23 @@
 import styled from "styled-components";
 
-export function BtnSave() {
+export function BtnSave({ funcion, titulo, bgcolor, icono }) {
   return (
-    <Container>
-      <h1>Boton de Guardado</h1>
+    <Container type="submit">
+      <span className="icono">{icono}</span>
+      <span className="btn" onClick={funcion}>
+        {titulo}
+      </span>
     </Container>
   );
 }
 
-const Container = styled.button `
+const Container = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-`
+  border: none;
+  .icono {
+    
+  }
+`;
